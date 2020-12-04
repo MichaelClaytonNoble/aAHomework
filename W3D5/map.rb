@@ -1,6 +1,5 @@
 class Map
 
-
   def initialize
     @array_map = []
   end
