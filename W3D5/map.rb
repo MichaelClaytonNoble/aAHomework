@@ -15,7 +15,7 @@ class Map
         break
       end
     end
-    @array_map.push([key,value]) unless true
+    @array_map.push([key,value]) unless key_flag
   end
 
   def get(key)
@@ -23,7 +23,7 @@ class Map
   end
 
   def delete(key)
-    @array_map.each{|pair| array_map.delete(pair) if pair.include?(key)}
+    @array_map.each{|pair| @array_map.delete(pair) if pair.include?(key)}
   end
 
   def show
