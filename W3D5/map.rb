@@ -37,3 +37,4 @@ class Map
     arr.map { |el| el.is_a?(Array) ? deep_dup(el) : el }
   end  
 end
+
