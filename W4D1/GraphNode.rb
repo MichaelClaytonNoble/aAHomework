@@ -1,13 +1,20 @@
+require 'set'
+
 class GraphNode
 
   attr_accessor :val, :neighbors
 
   def initialize(val)
+    @@visited = Set.new
     @val = val 
     @neighbors = []
   end
 
   def self.bfs(starting_node, target_value)
+
+    @@visited << starting_node
+
+    return nil if @@visited.include?(starting_node)
 
     return starting_node if starting_node.val == target_value
       
@@ -37,7 +44,5 @@ a.neighbors = [b, c, e]
 c.neighbors = [b, d]
 e.neighbors = [a]
 f.neighbors = [e]
-
-p a
 
 p GraphNode.bfs(a,"f")
