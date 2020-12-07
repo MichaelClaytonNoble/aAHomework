@@ -12,12 +12,10 @@ class GraphNode
 
   def self.bfs(starting_node, target_value)
 
-    @@visited << starting_node
-
-    return nil if @@visited.include?(starting_node)
-
+    
+    return starting_node if @@visited.include?(starting_node)
     return starting_node if starting_node.val == target_value
-      
+      @@visited << starting_node
     starting_node.neighbors.each do |neibor|
 
       result = bfs(neibor, target_value)
@@ -45,4 +43,4 @@ c.neighbors = [b, d]
 e.neighbors = [a]
 f.neighbors = [e]
 
-p GraphNode.bfs(a,"f")
+p GraphNode.bfs(a,"e")
