@@ -12,7 +12,6 @@ class GraphNode
 
   def self.bfs(starting_node, target_value)
 
-    
     return starting_node if @@visited.include?(starting_node)
     return starting_node if starting_node.val == target_value
       @@visited << starting_node
