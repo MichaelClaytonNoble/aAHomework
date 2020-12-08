@@ -12,7 +12,7 @@ rescue => e
 
 
 end
-
+debugger
 begin
   sam = BestFriend.new('', 1, '')
   sam1 = BestFriend.new("Sam1", 3, '')
