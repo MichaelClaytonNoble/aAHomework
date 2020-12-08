@@ -1,5 +1,9 @@
 class CoffeeError < StandardError
 end
+class BestFriendError < StandardError
+end
+class BestFriendInitializeError < StandardError
+end
 
 # PHASE 2
 def convert_to_int(str)
@@ -31,7 +35,10 @@ class BestFriend
   def initialize(name, yrs_known, fav_pastime)
     @name = name
     @yrs_known = yrs_known
+    raise BestFriendError if @yrs_known < 5
     @fav_pastime = fav_pastime
+
+    raise BestFriendInitializeError if name == ''  || @fav_pastime == ''
   end
 
   def talk_about_friendship
