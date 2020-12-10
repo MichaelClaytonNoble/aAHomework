@@ -40,6 +40,16 @@ class Simon
     
     puts "Repeat the sequence back : "
 
+    quess_sequence = []
+
+    i = 0
+    while i < @seq.seq
+        input = gets.chomp
+        guess_sequence << input
+
+      i+=1
+    end
+    return 
   end
 
   def add_random_color

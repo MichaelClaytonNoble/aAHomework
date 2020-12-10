@@ -18,6 +18,7 @@ begin
   sam1 = BestFriend.new("Sam1", 3, '')
 rescue => BestFriendError
   p "Real Friendships begin after 5 years"
+  BestFriend.new('Sam',6,'Gardening')
 rescue => BestFriendInitializeError
   p "Create a best friend with both a name and a favorite pasttime."
 ensure
