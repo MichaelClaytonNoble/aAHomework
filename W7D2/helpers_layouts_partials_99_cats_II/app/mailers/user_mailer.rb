@@ -4,6 +4,6 @@ class UserMailer < ApplicationMailer
   def welcome_email(user)
     @user = user
     @url = 'http://kitty-rentals.com/login'
-    mail(to: "temp-email@aa.io", subject: 'Welcome to Kitty-Rentals')
+    mail(to: @user.username , subject: 'Welcome to Kitty-Rentals')
   end
 end
