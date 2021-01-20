@@ -15,7 +15,7 @@ function Elephant(e_name, height, tricks){
   this.height = height;
   this.tricks = tricks;
   this.paradeHelper = (elephant) =>{
-    return "elephant.name +  is trotting by!";
+    return `${this.name} is trotting by!`;
   }
 }
 
@@ -45,4 +45,26 @@ let micah = new Elephant("Micah", 143, ["trotting", "playing tic tac toe", "doin
 let herd = [ellie, charlie, kate, micah];
 
 
-herd.forEach( x => {console.log(x.paradeHelper);});
+// herd.forEach( x => {console.log(x.paradeHelper());});
+
+
+function dinnerBreakfast(){
+
+  let order = "I'd like cheesy scrambled eggs";
+  function addPleaseThenPrint(){
+    console.log(`${order} please.`);
+  }
+  return (function _dinnerBreakfast(new_order){
+   
+    order += " and ";
+    order += new_order;
+    addPleaseThenPrint();
+  });
+}
+
+let bfastOrder = dinnerBreakfast();
+bfastOrder("chocolate chip pancakes");
+bfastOrder("grits");
+bfastOrder("poached eggs");
+
+
