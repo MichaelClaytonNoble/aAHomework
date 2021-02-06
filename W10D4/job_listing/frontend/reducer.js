@@ -12,7 +12,7 @@ const reducer = (state = initialState, action) => {
     case (SWITCH_LOCATION):
       console.log(nextState);
       nextState['city'] = action.city;
-      console.log(nextState);
+      nextState.jobs = action.jobs;
       return nextState;
     
     default:

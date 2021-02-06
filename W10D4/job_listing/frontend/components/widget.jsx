@@ -23,9 +23,6 @@ class Widget extends React.Component {
         // use the action creator 'selectLocation' to build the object to
         // be dispatched
         this.props.store.dispatch(this.selectLocation(city, resp))
-
-        
-
       }.bind(this)
     });
   }
